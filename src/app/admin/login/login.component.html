@@ -1,0 +1,27 @@
+<div class="row expanded align-center">
+    <h1>Login to your Account</h1>
+</div>
+<div class="row align-center">
+    <form>
+        <div class="small-12 columns">
+            <label for="email">Email :
+                <input type="email" [(ngModel)]="email" name="email" id="email" required #em="ngModel">
+                <div [hidden]="em.valid || em.pristine" class="alert callout">Email is required</div>
+            </label>
+        </div>
+        <div class="small-12 columns">
+            <label for="pasword1">Password :
+                <input type="password" [(ngModel)]="password1" name="email" id="password" required #pswrd="ngModel">
+                <div [hidden]="pswrd.valid || pswrd.pristine" class="alert callout">Password is required</div>
+            </label>
+        </div>
+        <div class="small-12 columns">
+            <div class="expanded button-group">
+                <a class="success button" (click)="login()">Login</a>
+                <a class="success button" (click)="signUp()">Sign Up</a>
+                <a class="text-center simlink" (click)="cancel()">Cancel</a>
+            </div>
+        </div>
+    </form>
+
+</div>
